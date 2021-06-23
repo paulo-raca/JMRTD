@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+jar {
+    manifest {
+        attributes(
+                "Built-By": "${System.properties['user.name']} on ${System.properties['os.name']} ${System.properties['os.arch']}",
+                "Build-Date": new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(new Date()),
+
+                "Implementation-Vendor": "JMRTD",
+                "Implementation-Title": "wsq_imageio",
+                "Implementation-Version": "0.0.2",
+        )
+    }
+}
